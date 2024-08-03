@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { getEpisodesBySeason } from '../utils/api';
 import { Spin, Alert, Card, Row, Col } from 'antd';
 import { ArrowRightOutlined } from '@ant-design/icons';
-import rickandmorty2 from '../assets/rickandmorty2.jpg'; // Resim yolu kontrol edin
+import rickandmorty2 from '../assets/rickandmorty2.jpg';
 
 interface Episode {
   id: number;
