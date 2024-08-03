@@ -22,7 +22,17 @@ export const getEpisode = async () => {
   }
 }
 
-export const getEpisodesBySeason = async (season) => {
+export const getEpisodeById = async (id: number) => {
+  try {
+    const response = await axios.get(`${BASE_URL}/episode/${id}`);
+    return response.data;
+  } catch (err) {
+    console.error('Error fetching episode', err);
+    throw err;
+  }
+};
+
+export const getEpisodesBySeason = async (season: number) => {
   try {
     const response = await axios.get(`${BASE_URL}/episode`, {
       params: {

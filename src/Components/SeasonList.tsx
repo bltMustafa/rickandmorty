@@ -23,12 +23,13 @@ const SeasonList: React.FC = () => {
   const fetchEpisodesBySeason = async (season: string) => {
     try {
       const data = await getEpisodesBySeason(season);
-      return data; // Yanıtın results özelliğini doğrulayın
+      return data;
     } catch (err) {
       console.error(`Error fetching episodes for season ${season}`, err);
       return [];
     }
   };
+
 
   const fetchAllSeasons = async () => {
     const seasonNumbers = ['S01', 'S02', 'S03', 'S04', 'S05'];
